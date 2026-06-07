@@ -1,4 +1,0 @@
-﻿  Scanning sources for module dependencies...
-  Game.cpp
-C:\Users\garri\OneDrive\Projects\C++\Tetris\Game.cpp(428,20): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
-  Tetris.vcxproj -> C:\Users\garri\OneDrive\Projects\C++\Tetris\x64\Debug\Tetris.exe

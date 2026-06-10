@@ -17,21 +17,21 @@ void Tetris::Run() {
 
 
 		renderer.Wipe();
-		title.Write(renderer);
+		title.Create(renderer);
 
-		while (title.getSelected() == -1) {
+		while (title.GetSelected() == -1) {
 			title.HandleInput(input);
 			title.Update(renderer);
 			renderer.Refresh();
 		}
 
 
-		if (title.getSelected() == 0) {
+		if (title.GetSelected() == 0) {
 			
 			renderer.Wipe();
-			game.Write(renderer);
+			game.Create(renderer);
 
-			while (!game.getExit()) {
+			while (!game.GetExit()) {
 				game.HandleInput(input, renderer);
 				game.Update(renderer);
 				renderer.Refresh();
@@ -41,12 +41,12 @@ void Tetris::Run() {
 		}
 
 
-		if (title.getSelected() == 1) {
+		if (title.GetSelected() == 1) {
 
 			renderer.Wipe();
-			controls.Write(renderer);
+			controls.Create(renderer);
 
-			while (!controls.getExit()) {
+			while (!controls.GetExit()) {
 				controls.HandleInput(input);
 				renderer.Refresh();
 			}
@@ -55,7 +55,7 @@ void Tetris::Run() {
 		}
 
 
-		if (title.getSelected() == 2) {
+		if (title.GetSelected() == 2) {
 			break;
 		}
 

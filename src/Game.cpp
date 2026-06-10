@@ -6,8 +6,6 @@
 
 Game::Game() :
 	board(WIDTH * HEIGHT) {
-
-	srand(static_cast<unsigned int>(time(0)));
 	Init();
 }
 
@@ -27,6 +25,9 @@ void Game::HandleInput(HANDLE input, Renderer& renderer) {
 					break;
 				case 'S':
 					if (!paused) {
+						if (CanMoveDown()) {
+							score++;
+						}
 						MoveDown();
 					}
 					break;
@@ -83,7 +84,7 @@ void Game::HandleInput(HANDLE input, Renderer& renderer) {
 		}
 	}
 }
-void Game::Write(Renderer& renderer) {
+void Game::Create(Renderer& renderer) {
 
 	for (int y = 1; y < 29; y++) {
 		renderer.WriteCell('#', FOREGROUND_INTENSITY, 27, y);
@@ -140,6 +141,9 @@ void Game::Write(Renderer& renderer) {
 
 	WriteTetrominoToScreen(renderer, next, 77, 15, 0);
 	WriteTetrominoToBoard();
+
+	srand(static_cast<unsigned int>(time(0)));
+	previous = std::chrono::steady_clock::now();
 }
 void Game::Update(Renderer& renderer) {
 
@@ -186,7 +190,7 @@ void Game::Update(Renderer& renderer) {
 		}
 	}
 }
-bool Game::getExit() {
+bool Game::GetExit() {
 	return exitGame;
 }
 void Game::Reset() {
@@ -442,9 +446,9 @@ void Game::UpdateScore(Renderer& renderer) {
 	renderer.WriteText(sScore, FOREGROUND_INTENSITY, 79, 8);
 }
 void Game::UpdateLevel(Renderer& renderer) {
-	int current = level;
+	int previousLevel = level;
 	level = lines / 10;
-	if (level > current) {
+	if (level > previousLevel) {
 		if (level < 9) {
 			speed = speed - 5;
 		}
@@ -520,6 +524,7 @@ void Game::Init() {
 	level = 0;
 	speed = 48;
 	msPerTick = (speed / 60.0) * 1000.0;
+	accumulator = 0.0;
 	previous = std::chrono::steady_clock::now();
 	statistics = { 0, 0, 0, 0, 0, 0, 0 };
 }

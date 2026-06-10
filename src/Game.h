@@ -10,9 +10,9 @@ public:
 	Game();
 
 	void HandleInput(HANDLE input, Renderer& renderer);
-	void Write(Renderer& renderer);
+	void Create(Renderer& renderer);
 	void Update(Renderer& renderer);
-	bool getExit();
+	bool GetExit();
 	void Reset();
 
 private:

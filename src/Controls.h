@@ -8,9 +8,9 @@ public:
 
 	Controls();
 
-	void Write(Renderer& renderer);
+	void Create(Renderer& renderer);
 	void HandleInput(HANDLE input);
-	bool getExit();
+	bool GetExit();
 	void Reset();
 
 private:

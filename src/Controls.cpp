@@ -4,7 +4,7 @@ Controls::Controls() {
 	exit = false;
 }
 
-void Controls::Write(Renderer& renderer) {
+void Controls::Create(Renderer& renderer) {
 	renderer.WriteText("   CONTROLS", FOREGROUND_INTENSITY, 53, 8);
 	renderer.WriteText("  A      MOVE LEFT", FOREGROUND_INTENSITY, 53, 10);
 	renderer.WriteText("  D      MOVE RIGHT", FOREGROUND_INTENSITY, 53, 11);
@@ -37,7 +37,7 @@ void Controls::HandleInput(HANDLE input) {
 		}
 	}
 }
-bool Controls::getExit() {
+bool Controls::GetExit() {
 	return exit;
 }
 void Controls::Reset() {

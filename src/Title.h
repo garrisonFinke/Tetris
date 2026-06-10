@@ -12,9 +12,9 @@ public:
 
 	void HandleInput(HANDLE input);
 	void WriteBigLetter(Renderer& renderer, std::string letter, WORD color, int x, int y);
-	void Write(Renderer& renderer);
+	void Create(Renderer& renderer);
 	void Update(Renderer& renderer);
-	int getSelected();
+	int GetSelected();
 	void Reset();
 
 private:

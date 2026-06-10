@@ -43,7 +43,7 @@ void Title::WriteBigLetter(Renderer& renderer, std::string letter, WORD color, i
 		renderer.WriteCell(letter[i], color, x + i % 10, y + i / 10);
 	}
 }
-void Title::Write(Renderer& renderer) {
+void Title::Create(Renderer& renderer) {
 	WriteBigLetter(renderer, bigT, FOREGROUND_RED, 25, 7);
 	WriteBigLetter(renderer, bigE, FOREGROUND_RED | FOREGROUND_GREEN, 37, 7);
 	WriteBigLetter(renderer, bigT, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY, 49, 7);
@@ -62,7 +62,7 @@ void Title::Update(Renderer& renderer) {
 	}
 }
 
-int Title::getSelected() {
+int Title::GetSelected() {
 	return selected;
 }
 

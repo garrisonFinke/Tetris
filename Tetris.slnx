@@ -3,19 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Folder Name="/Solution Items/">
-    <File Path="src/Controls.cpp" />
-    <File Path="src/Controls.h" />
-    <File Path="src/Game.cpp" />
-    <File Path="src/Game.h" />
-    <File Path="src/Main.cpp" />
-    <File Path="src/Renderer.cpp" />
-    <File Path="src/Renderer.h" />
-    <File Path="src/Tetris.cpp" />
-    <File Path="src/Tetris.h" />
-    <File Path="src/Tetrominos.h" />
-    <File Path="src/Title.cpp" />
-    <File Path="src/Title.h" />
-  </Folder>
   <Project Path="Tetris.vcxproj" Id="4ef22aae-ed12-4130-aa02-a918542858e0" />
 </Solution>

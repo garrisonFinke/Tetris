@@ -6,6 +6,7 @@
 
 Game::Game() :
 	board(WIDTH * HEIGHT) {
+	srand(static_cast<unsigned int>(time(0)));
 	Init();
 }
 
@@ -142,7 +143,6 @@ void Game::Create(Renderer& renderer) {
 	WriteTetrominoToScreen(renderer, next, 77, 15, 0);
 	WriteTetrominoToBoard();
 
-	srand(static_cast<unsigned int>(time(0)));
 	previous = std::chrono::steady_clock::now();
 }
 void Game::Update(Renderer& renderer) {

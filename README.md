@@ -2,15 +2,16 @@
 
 A console-based Tetris clone for Windows, built in C++ using Win32 APIs.
 
-![Screenshot](screenshot.png)
+<img width="1110" height="587" alt="Screenshot 2026-06-09 215500" src="https://github.com/user-attachments/assets/a9da1ed0-091e-48a2-8502-d012fe19c336" />
 
 ## Download
 
-Grab the latest **[Tetris.exe](../../releases/latest)** from Releases — no install needed, just run it.
+Grab the latest **[Tetris.exe](Tetris.exe)** from Releases — no install needed, just run it.
 
 ## Building from Source
 
 **Requirements**
+
 - Windows
 - Visual Studio 2022 (or later) with the Desktop development with C++ workload
 

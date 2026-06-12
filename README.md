@@ -6,7 +6,7 @@ A console-based Tetris clone for Windows, built in C++ using Win32 APIs.
 
 ## Download
 
-Grab the latest **[Tetris.exe](Tetris.exe)** from Releases — no install needed, just run it.
+Grab the Console Tetris folder and run Tetris.exe. The .exe is unsigned so Windows may pop up with a warning, but it is safe to run anyway.
 
 ## Building from Source
 

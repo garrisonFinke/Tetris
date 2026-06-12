@@ -33,7 +33,7 @@ void Tetris::Run() {
 
 			while (!game.GetExit()) {
 				game.HandleInput(input, renderer);
-				game.Update(renderer);
+				game.Update(renderer, input);
 				renderer.Refresh();
 			}
 

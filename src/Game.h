@@ -11,7 +11,7 @@ public:
 
 	void HandleInput(HANDLE input, Renderer& renderer);
 	void Create(Renderer& renderer);
-	void Update(Renderer& renderer);
+	void Update(Renderer& renderer, HANDLE input);
 	bool GetExit();
 	void Reset();
 

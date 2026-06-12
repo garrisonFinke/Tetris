@@ -145,7 +145,7 @@ void Game::Create(Renderer& renderer) {
 
 	previous = std::chrono::steady_clock::now();
 }
-void Game::Update(Renderer& renderer) {
+void Game::Update(Renderer& renderer, HANDLE input) {
 
 	if (!paused && !gameover) {
 
@@ -172,12 +172,14 @@ void Game::Update(Renderer& renderer) {
 				UpdateStatistics(renderer);
 				gameover = IsGameOver();
 				WriteTetrominoToBoard();
+				FlushConsoleInputBuffer(input);
 			}
 		}
 
 		UpdateBoard(renderer);
 
 		if (gameover) {
+			renderer.Refresh();
 			Sleep(1000);
 			for (int y = 7; y < 5 + HEIGHT; y++) {
 				for (int x = 51; x < 70; x++) {

@@ -2,5 +2,4 @@
 .vs/
 Tetris/
 x64/
-.user
-
+.vcxproj.user

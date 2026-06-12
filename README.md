@@ -25,7 +25,7 @@ The executable will be output to `x64/Release/Tetris.exe`.
 
 ## How to Play
 
-Use the controls below to play. The game starts paused — press **H** to begin.
+Use the controls below to play.
 
 | Key | Action |
 |-----|--------|
